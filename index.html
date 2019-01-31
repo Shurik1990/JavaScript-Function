@@ -20,125 +20,104 @@
 				<section id="block1">
 					<h2>Задача №1</h2>
 					<script>
-						var days = 365;
-						var planet = "Земля";
-						var people = "7 млрд.";
-						var sun = "Солнца";
-						document.write("<p>Мы живем на планете " + planet + ", она делает один оборот вокруг " + sun + " за " + days + " дней. Население нашей планеты составляет примерно " + people + " человек.</p>");
+						
 					</script>
 				</section>
 				<section id="block2">
 					<h2>Задача №2</h2>
 					<script>
-						var a = 5;
-						var b, c;
-						b = a * 5;
-						b = c = b/2;
-						document.write("<p>b = " + b + "</p>")
-						document.write("<p>c = " + c + "</p>")
-						document.write("<p>Выражения: a * 5 и b = c = b/2. Сначала вычисляется выражение справа, а значение выражения запоминается в функционале языка программирования, переменная слева связывается со значением.</p>");
-						document.write("<p>Бинарный оператор, справа от которого находится выражение с единственным результатом, а слева - переменная, поле объекта или элемент массива. Присваивание также возвращает полученное значение, так что его можно использовать в цепочке. a = b = c = 1 + 2.</p>");
-						document.write("<p>Вычисления будут происходить в зависимости от приоритета, внчале умножение, а потом - деление.</p>");
+						
 					</script>
 					<script>
-						document.write("<h3>Скобки:</h3>");
-						var a = 5;
-						var b, c;
-						b = (a * 5);
-						b = (c = (b/2));
-						document.write("<p>b = " + b + "</p>")
-						document.write("<p>c = " + c + "</p>")
+						
 					</script>
 				</section>
 				<section id="block3">
 					<h2>Задача №3</h2>
 					<script>
-						var countries = ["Украина", "Болгария", "Турция", "США", "Россия"];
-						var population = [44.8, 7.1, 79.8, 325.7, 144.5];
-						document.write("<p>1. " + countries[0] + " = " + population[0] + " миллиона;</p>");
-						document.write("<p>2. " + countries[1] + " = " + population[1] + " миллиона;</p>");
-						document.write("<p>3. " + countries[2] + " = " + population[2] + " миллиона;</p>");
-						document.write("<p>4. " + countries[3] + " = " + population[3] + " миллиона;</p>");
-						document.write("<p>5. " + countries[4] + " = " + population[4] + " миллиона;</p>");
+						function formatDate(date) {
+						  var hh = date.getHours();
+						  if (hh < 10) hh = '0' + hh;
+
+						  var mm = date.getMinutes();
+						  if (mm < 10) mm = '0' + mm;
+
+						  var ss = date.getSeconds();
+						  if (ss < 10) ss = '0' + ss;
+
+						  return hh + ':' + mm + ':' + ss;
+						}
+
+						var d = new Date();
+						document.write( formatDate(d) );
 					</script>
 				</section>
 				<section id="block4">
 					<h2>Задача №4</h2>
 					<script>
-						var fruits = ["Апельсин", "Банан", "Груша"];
-						document.write("<p>Кол-во фруктов: " + fruits.length + ";</p>");
-						fruits.push("Яблоко", "Ананас");
-						fruits.unshift("Грейпфрут");
-						document.write("<p>Новое кол-во фруктов: " + fruits.length + ";</p>");
-						fruits.pop();
-						fruits.shift();
-						document.write("<p>Осталось фруктов: " + fruits.length + ".</p>");
+						var days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+						var months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+						var now = new Date ();
+						var millisec = now.getTime();
+						
+						function now_date(n) {
+							var day_after_n = new Date(1000 * 60 * 60 * 24 * n);
+							var millisec_in_n = day_after_n.getTime();
+
+							var millisec_sum = new Date(millisec + millisec_in_n);
+
+							document.write("<p>Через " + n + " дней будет вот такая дата: </p>");
+							document.write("<p>День недели: " + days[millisec_sum.getDay()] + "</p>");
+							document.write("<p>Число: " + millisec_sum.getDate() + "</p>");
+							document.write("<p>Месяц: " + months[millisec_sum.getMonth()] + "</p>");
+							document.write("<p>Год: " + millisec_sum.getFullYear() + "</p>");
+						}
+						
+						var user = prompt("Введите число от 1 до 1000, чтобы узнать интересующую дату:");
+						var n = Math.round(user);
+
+						if (n > 1 && n < 1000) {
+							now_date(n);
+						} 
+						else {
+							alert("Вы указали неверное значение, что с Вами не так?))") 
+						}
 					</script>
 				</section>
 				<section id="block5">
 					<h2>Задача №5</h2>
 					<script>
-						var fruits = ["Яблоко", " Апельсин", " Груша", " Гранат"];
-						fruits.splice(length - 2, 1, " Ананас");
-						document.write("<p>" + fruits + "</p>");
-						var fruits = ["Банан", " Мандарин", " Манго"];
-						fruits.splice(length - 2, 1, " Ананас");
-						document.write("<p>" + fruits + "</p>");
+						
 					</script>
 				</section>
 				<section id="block6">
 					<h2>Задача №6</h2>
 					<script>
-						var students = ["Сергей", "Матвей", "Лейла", "Алина", "Иоган"];
-						if (students.length >= 3){
-							document.write("<p>Ух, какой большой массив! У нас тут минимум 3 элемента.</p>");
-						} 
-						else {
-							document.write("<p>Какой же маленький массив, меньше 3-ёх элементов.</p>");
-						}
+						
 					</script>
 				</section>
 				<section id="block7">
 					<h2>Задача №7</h2>
 					<script>
-						var students = ["Дмитрий", "Алексей", "Петр", "Виктор"];
-						var lastItem = students[students.length - 1];
-						if (students.length == 4 && lastItem == "Виктор"){
-							document.write("<p>Этот массив мне подходит.</p>");
-						} 
-						else {
-							document.write("<p>Этот массив мне не подходит!</p>");
-						}
+						
 					</script>
 				</section>
 				<section id="block8">
 					<h2>Задача №8</h2>
 					<script>
-						a = 1;
-						b = 8;
-						var result = (a + b < 4) ? 'Мало' : 'Много';
-						document.write(result);
+						
 					</script>
 				</section>
 				<section id="block9">
 					<h2>Задача №9</h2>
 					<script>
-						var login = "Директор";
-						var message = (login == "Вася") ? "Привет" :
-							(login == "Директор") ? "Здравствуйте" :
-							(login == "") ? "Нет логина" : 
-							"";
-						document.write(message);
+						
 					</script>
 				</section>
 				<section id="block10">
 					<h2>Задача №10</h2>
 					<script>
-						var value = prompt('Каково "официальное" название JavaScript?', "");
-						var word = (value == "ECMAScript") ? "Верно!":
-							('Не знаете? "ECMAScript"!');
-						alert(word);
-						document.write(word);
+
 					</script>
 				</section>
 			</div>
