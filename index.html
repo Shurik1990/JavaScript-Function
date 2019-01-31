@@ -20,13 +20,38 @@
 				<section id="block1">
 					<h2>Задача №1</h2>
 					<script>
-						
+						var browser = "IE";
+						if (browser === 'IE') {
+							document.write('О, да у вас IE!');
+						} else if (browser === 'Chrome'|| browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+							document.write('Да, и эти браузеры мы поддерживаем');
+						} else {
+							document.write('Мы надеемся, что и в вашем браузере все ок!');
+						}
 					</script>
 				</section>
 				<section id="block2">
 					<h2>Задача №2</h2>
 					<script>
-						
+						var a = +prompt('a?', '');
+
+						switch (a) {
+							case 0:
+							alert( 0 );
+							document.write( 0 );
+							break;
+
+							case 1:
+							alert( 1 );
+							document.write( 1 );
+							break;
+
+							case 2:
+							case 3:
+							alert( '2,3' );
+							document.write( '2,3' );
+							break;
+						}
 					</script>
 					<script>
 						
