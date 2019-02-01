@@ -53,9 +53,6 @@
 							break;
 						}
 					</script>
-					<script>
-						
-					</script>
 				</section>
 				<section id="block3">
 					<h2>Задача №3</h2>
@@ -105,14 +102,31 @@
 							now_date(n);
 						} 
 						else {
-							alert("Вы указали неверное значение, что с Вами не так?))") 
+							alert("Вы указали неверное значение, что с Вами не так?))")
+							document.write("Вы указали неверное значение, что с Вами не так?))");
 						}
 					</script>
 				</section>
 				<section id="block5">
 					<h2>Задача №5</h2>
 					<script>
+						var forTesting = "8 пингвинов и 9 карасей.";
 						
+						function search() {
+							var regular = /\d/;
+
+							var result = forTesting.search(regular);
+
+							if (result == 0) {
+								document.write("Содержимое переменной начинается с цифры"); 
+							}
+
+							else {
+								document.write("Содержимое переменной начинается не с цифры"); 
+							}
+						}
+
+						search(forTesting);
 					</script>
 				</section>
 				<section id="block6">
