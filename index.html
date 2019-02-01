@@ -177,13 +177,27 @@
 							return result;
 						}
 						var user = prompt("Напишите любое слово:");
-						var s = word(user);
+						var massage = word(user);
 						
-						document.write(s);
+						document.write(massage);
 					</script>
 				</section>
 				<section id="block9">
 					<h2>Задача №9</h2>
+					<h3>Первый способ:</h3>
+					<script>
+						for (i = 1; i < 8; i++) {
+							document.write("<p>Квадрат " + i + " = " + i*i + "</p>");
+						}
+						var a = +prompt("Введите первое число", "");
+						var b = +prompt("Введите второе число", "");
+						function sum(a,b) {
+							var result = a + b;
+							document.write("<p>Сумма: " + result + "</p>");
+						}
+						sum(a,b);
+					</script>
+					<h3>Второй способ:</h3>
 					<script>
 						
 					</script>
