@@ -144,7 +144,18 @@
 				<section id="block7">
 					<h2>Задача №7</h2>
 					<script>
+						var tel = "8/927/31/10/765";
+						var sign = "-";
 						
+						function replace(tel,sign) {
+							var regular = /\//g;
+
+							var result = tel.replace(regular,sign);
+
+							document.write(result);
+						}
+
+						replace(tel,sign);
 					</script>
 				</section>
 				<section id="block8">
