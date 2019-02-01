@@ -161,7 +161,25 @@
 				<section id="block8">
 					<h2>Задача №8</h2>
 					<script>
+						function word(n) {
+							if (n.length > 10) {
+								var result = "В этом слове больше 10-ти символов";
+							}
+							else if (n.length < 10) {
+								var result = "В этом слове меньше 10-ти символов";
+							}
+							else if (n.length == 10) {
+								var result = "В этом слове кол-во символов равно 10-ти";
+							}
+							else {
+								var result = "Это разве слово?";
+							}
+							return result;
+						}
+						var user = prompt("Напишите любое слово:");
+						var s = word(user);
 						
+						document.write(s);
 					</script>
 				</section>
 				<section id="block9">
