@@ -184,11 +184,13 @@
 				</section>
 				<section id="block9">
 					<h2>Задача №9</h2>
-					<h3>Первый способ:</h3>
 					<script>
 						for (i = 1; i < 8; i++) {
 							document.write("<p>Квадрат " + i + " = " + i*i + "</p>");
 						}
+					</script>
+					<h3>Первый способ:</h3>
+					<script>
 						var a = +prompt("Введите первое число", "");
 						var b = +prompt("Введите второе число", "");
 						function sum(a,b) {
@@ -199,7 +201,11 @@
 					</script>
 					<h3>Второй способ:</h3>
 					<script>
-						
+						var a = +prompt("Введите первое число", "");
+						var b = +prompt("Введите второе число", "");
+						var sum = new Function('a,b', 'return a+b;');
+						var result = sum(a, b);
+						document.write("<p>Сумма: " + result + "</p>"); 
 					</script>
 				</section>
 				<section id="block10">
